@@ -1,0 +1,6 @@
+<div class="sidenav">
+    <span (click)='newDoc()'>Documento Nuevo</span>
+    <span [class.selected]='docId === actualDoc' *ngFor='let docId of documentos | async' (click)='readDoc(docId)'>
+        {{docId}}
+    </span>
+</div>
